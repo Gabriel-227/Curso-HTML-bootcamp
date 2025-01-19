@@ -1,13 +1,17 @@
 // componentes
-@import "sass/componentes";
+@use "sass/componentes";
+//namespace
+//$color -> comp.$color
 
 //Mixins
-@import "sass/mixins";
+@use "sass/mixins";
+//$color -> $color
 
 //Estilos
-@import "sass/estilos";
+@use "sass/estilos";
 
 // Paginas
 //pagina principal
 //pagina de contacto
 //pagina de aviso legal
+
