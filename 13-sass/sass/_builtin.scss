@@ -1,6 +1,9 @@
 //Funciones con cadenas de texto
 @use "sass:string";
 @use "sass:math";
+@use "sass:list";
+@use "sass:selector";
+@use "sass:color";
 
 @debug "Hola";
 @debug string.index("Helvetica Neue", "Neue");
@@ -41,3 +44,51 @@ $newString: string.insert($string, " Bold", 10);
 @debug math.cos(math.$pi);
 @debug math.sin(math.$pi);
 @debug math.tan(math.$pi);
+
+// Funciones con listas
+$lista1: 10px, 10px, 0px, 15px;
+
+@debug $lista1;
+@debug list.append($lista1, 25px, space);
+
+$border-custom: solid 1px #ccc;
+@debug list.index($border-custom, 1px); //2
+@debug list.index($border-custom, 2px); // null
+
+// $border-2: [solid, 1px, #ccc];
+// @debug list.is-bracketed($border-2);
+
+@debug list.join($lista1, $border-custom, auto);
+@debug list.length(list.join($lista1, $border-custom, auto));
+@debug list.separator($border-custom);
+@debug list.separator(list.join($lista1, $border-custom, auto));
+
+@debug list.set-nth($border-custom, 2, 2px);
+
+//Funciones de Selector
+$selector-1:"a";
+$selector-2:".disabled";
+@debug selector.append($selector-1, $selector-2);
+
+//Funcion de Colores
+
+$color: rgb(226, 81, 255);
+@debug color.adjust($color, $red: -50);
+$color-2:  rgba(177, 81, 255, 0.5);
+
+@debug color.complement($color);
+$color-comp: #6eff51;
+@debug darken($color, 20%);
+$color-dark: #c300ea;
+@debug lighten($color, 20%);
+$color-dark: #f3b7ff;
+
+@debug color.red($color);
+@debug color.green($color);
+@debug color.blue($color);
+
+@debug color.hue($color);
+
+@debug color.invert($color);
+$color-inv: #1dae00;
+
