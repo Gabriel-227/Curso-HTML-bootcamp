@@ -70,12 +70,12 @@ $color-main: #0075FF;
     }
 }
 
-.feature {
+.benefit {
     display: flex;
     flex-direction: column;
-    .icon {
+    i {
         color: $color-main;
-        font-size: 10rem;
+        font-size: 6rem;
         text-align: center;
     }
     .description {
@@ -86,14 +86,14 @@ $color-main: #0075FF;
         }
         .text {
             color: #888;
-            font-weight: 600;
+            font-weight: 500;
             text-align: center;
         }
     }
     .cta {
-        margin-top: 3rem;
+        margin-top: 2rem;
         color: $color-main;
-        font-weight: 600;
+        font-weight: 500;
         text-align: center;
     }
 }

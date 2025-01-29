@@ -91,3 +91,26 @@ body {
         }
     }
 }
+
+.sec-benefits {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    .intro {
+        @extend .sec-features, .intro;
+        p {
+            margin-top: -1rem;
+        }
+    }
+    .benefit-cards {
+        display: flex;
+        gap: 20px;
+        padding: 0 2rem 2rem 2rem;
+    }
+    .benefit {
+        flex: 1;
+        min-width: 150px;
+        .icon {
+            font-size: 4.5rem;
+        }
+    }
+}
