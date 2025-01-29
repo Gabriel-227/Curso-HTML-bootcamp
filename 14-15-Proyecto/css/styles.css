@@ -114,7 +114,10 @@ body {
 .sec-home {
   display: flex;
   width: 100%;
+  max-width: 768px;
+  margin: auto;
   padding: 5rem;
+  align-items: center;
 }
 .sec-home .home-cta {
   flex: 1;
